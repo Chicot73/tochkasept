@@ -1,0 +1,17 @@
+.title3 {
+    @include font-u (400, 3.2rem, 120%);
+    text-align: center;
+    color: var(--color-text);
+
+    span {
+        color: var(--color-accent);
+    }
+
+    @include for-tablet-landscape-lg {
+        font-size: 2.9rem;
+    }
+
+    @include for-phone-portrait-xs {
+        font-size: 2.2rem;
+    }
+}

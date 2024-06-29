@@ -1,3 +1,57 @@
 header.header
     .container
-        .row
+        .header__group
+            .header__logo
+                img(src="img/Logo.png", alt="Точкасепт")
+
+            .header__geo
+                p Москва и МО
+            
+            .yandex
+                .yandex__rating
+                    .yandex__rate 5.0
+                    .yandex__logo <span>Я</span>ндекс
+
+                .yandex__stats
+                    .yandex__stars
+                        img(src="img/star.svg", alt="star2")
+                        img(src="img/star.svg", alt="star")
+                        img(src="img/star.svg", alt="star")
+                        img(src="img/star.svg", alt="star")
+                        img(src="img/star.svg", alt="star")
+                    p.yandex__users 33 отзыва&emsp;36 оценок
+            
+            .header__phone
+                .header__phone-call
+                    .socials
+                        a(href="#")
+                            img.socials__item(src="img/tg.svg", alt="telegram")
+                        
+                        a(href="#")
+                            img.socials__item(src="img/wapp.svg", alt="whatsapp")
+                        
+                    p +7 (495) 123-45-67
+
+                .header__phone-form
+                    a(onclick="scrolltoFn()") обратный звонок
+            .header__cross(id="cross")
+            .header__burger(id="burger")
+    
+    .header__burger-menu
+        .header__phone
+            .header__phone-call
+                .socials
+                    a(href="#")
+                        img.socials__item(src="img/tg.svg", alt="telegram")
+                    
+                    a(href="#")
+                        img.socials__item(src="img/wapp.svg", alt="whatsapp")
+                .header__call-mob    
+                    p +7 (495) 123-45-67
+                    a(id="call", onclick="scrolltoFn()") обратный звонок
+
+        .header__geo
+            p Москва и МО
+
+.dark
+                

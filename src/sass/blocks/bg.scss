@@ -1,0 +1,63 @@
+.bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 109rem;
+    z-index: -1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @include for-laptop-desktop-xl {
+        height: 112rem;
+        width: 100%;
+        left: 50%;
+    }
+
+    @include for-tablet-portrait-md {
+        height: 119rem;
+        width: 126%;
+        left: 38%;
+    }
+
+    @media (max-width: 43.75em) {
+        height: 120em;
+        left: 37%;
+    }
+
+    @include for-phone-landscape-sm {
+        height: 134em;
+        left: 38%;
+    }
+
+
+
+    @include for-phone-portrait-xs {
+        left: 52%;
+    }
+
+    &__leftimg {
+        img {
+            @include sizes (26.4rem, 54.5rem);
+            margin-top: -56rem;
+            margin-left: 0;
+
+            @include for-tablet-portrait-md {
+                margin-left: 14rem;
+            }
+
+            @include for-phone-landscape-sm {
+                margin-left: 8rem;
+            }
+
+            @include for-phone-portrait-xs {
+                margin-left: 0;
+            }
+        }
+    }
+}

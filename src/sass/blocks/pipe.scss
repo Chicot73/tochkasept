@@ -1,0 +1,87 @@
+.pipe--1 {
+    position: absolute;
+    width: 100%;
+    top: 8rem;
+    left: 1rem;
+    z-index: -1;
+}
+
+.pipe--2 {
+    position: absolute;
+    width: 100%;
+    max-width: 76rem;
+    height: 110%;
+    max-height: 250rem;
+    top: 8rem;
+    left: -0.5rem;
+    z-index: -1;
+    display: none;
+}
+
+.pipe--3 {
+    position: absolute;
+    width: 47rem;
+    top: 8rem;
+    left: 1rem;
+    z-index: -1;
+    display: none;
+    overflow-x: hidden;
+}
+
+.pipe--4 {
+    position: absolute;
+    width: 37.6rem;
+    top: 8rem;
+    left: 0rem;
+    z-index: -1;
+    display: none;
+    overflow-x: hidden;
+}
+
+@include for-tablet-landscape-lg {
+    .pipe--1 {
+        display: none;
+    }
+
+    .pipe--2 {
+        display: block;
+    }
+}
+
+@include for-tablet-portrait-md {
+    .pipe--2 {
+        position: absolute;
+        width: 110%;
+        max-width: 120rem;
+        height: 110%;
+        max-height: 250rem;
+        top: 8rem;
+        left: -3rem;
+        z-index: -1;
+    }
+}
+
+@include for-phone-landscape-sm {
+
+    .pipe--2 {
+        display: none;
+    }
+
+    .pipe--3 {
+        width: 41.5rem;
+        top: 8rem;
+        left: 3rem;
+        z-index: -1;
+        display: block;
+    }
+}
+
+@include for-phone-portrait-xs {
+    .pipe--3 {
+        display: none;
+    }
+
+    .pipe--4 {
+        display: block;
+    }
+}

@@ -16,33 +16,33 @@ const rename = require("gulp-rename"); //Отмена ужатия CSS
 const size = require("gulp-size");
 const shorthand = require("gulp-shorthand"); //короткие выражения CSS
 const groupCssMediaQueries = require("gulp-group-css-media-queries");
-const webpCss = require("gulp-webp-css");
+//const webpCss = require("gulp-webp-css");
 
 //обработка CSS
 const css = () => {
-    return src(path.css.src, {sourcemaps: app.isDev})
-    .pipe(plumber({
-        errorHandler: notify.onError(error => ({
-            title: "CSS",
-            message: error.message
+    return src(path.css.src, { sourcemaps: app.isDev })
+        .pipe(plumber({
+            errorHandler: notify.onError(error => ({
+                title: "CSS",
+                message: error.message
+            }))
         }))
-    }))
-    .pipe(concat("main.css"))
-    .pipe(cssimport())
-    .pipe(webpCss())
-    .pipe(autoprefixer())
-    .pipe(shorthand())
-    .pipe(groupCssMediaQueries())
-    .pipe(size({title: "main.css"}))
-    .pipe(dest(path.css.dest, {sourcemaps: app.isDev}))
-    .pipe(rename({suffix: ".min"}))
-    .pipe(csso({
-        restructure: false,
-        sourceMap: true,
-        debug: true
-    }))
-    .pipe(size({title: "main.min.css"}))
-    .pipe(dest(path.css.dest, {sourcemaps: app.isDev}));
+        .pipe(concat("main.css"))
+        .pipe(cssimport())
+        //.pipe(webpCss())
+        .pipe(autoprefixer())
+        .pipe(shorthand())
+        .pipe(groupCssMediaQueries())
+        .pipe(size({ title: "main.css" }))
+        .pipe(dest(path.css.dest, { sourcemaps: app.isDev }))
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))
+        .pipe(size({ title: "main.min.css" }))
+        .pipe(dest(path.css.dest, { sourcemaps: app.isDev }));
 }
 
 module.exports = css;

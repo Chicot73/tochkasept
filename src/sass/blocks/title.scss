@@ -1,0 +1,79 @@
+.title {
+    margin-bottom: 0.2rem;
+    @include font-u(600, 6rem, 100%);
+    text-transform: uppercase;
+    color: var(--color-text);
+    margin-bottom: 8rem;
+
+    span:first-child {
+        color: var(--color-accent);
+        line-height: 140%;
+    }
+
+    span:nth-child(5),
+    span:nth-child(6) {
+        @include font-u(400, 3.2rem, 100%);
+        text-transform: none;
+    }
+
+    @include for-laptop-desktop-xl {
+        @include font-u(600, 5rem, 100%);
+    }
+
+    @include for-tablet-portrait-md {
+        padding-right: 5vw;
+        @include font-u(600, 4.5rem, 120%);
+
+        span:first-child {
+            line-height: 100%;
+        }
+
+        span:nth-child(3) {
+            display: inline-block;
+        }
+
+        span:nth-child(5) {
+            margin-top: 2rem;
+        }
+
+        span:nth-child(5),
+        span:nth-child(6) {
+            display: block;
+            @include font-u(400, 3.2rem, 110%);
+        }
+
+    }
+
+    @media (max-width: 43.75em) {
+        margin-bottom: 6rem;
+    }
+
+    @include for-phone-landscape-sm {
+        @include font-u(600, 4.1rem, 120%);
+        padding-right: 13vw;
+        text-align: center;
+        padding: 0 2rem;
+
+        span:nth-child(5),
+        span:nth-child(6) {
+            letter-spacing: -0.02em;
+        }
+    }
+
+    @media (max-width: 28.75em) {
+        @include font-u(600, 3.5rem, 120%);
+        padding: 0;
+
+    }
+
+    @include for-phone-portrait-xs {
+        @include font-u(600, 3.2rem, 120%);
+
+
+        span:nth-child(5),
+        span:nth-child(6) {
+            @include font-u(400, 3rem, 100%);
+            text-transform: none;
+        }
+    }
+}

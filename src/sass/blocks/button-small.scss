@@ -1,0 +1,71 @@
+.button-small {
+    cursor: pointer;
+    display: block;
+    width: 80%;
+    max-width: 32.4rem;
+    height: 100%;
+    max-height: 7.8rem;
+    position: absolute;
+    z-index: 7;
+
+    // @supports (-webkit-appearance:none) {
+    //     background: url("../img/button-big.webp") no-repeat/cover;
+    // }
+
+    &__include {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        p {
+            @include font-g(700, 2.2rem, 120%);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--color-text-light);
+            width: 100%;
+            height: 100%;
+            @include absolute-c;
+            display: grid;
+            align-content: center;
+            padding-bottom: .5rem;
+            user-select: none;
+            cursor: pointer;
+            z-index: 9;
+            border: 0 !important;
+        }
+
+        img {
+            width: 100%;
+            max-width: 27.6rem;
+            height: 100%;
+            max-height: 7.8rem;
+            @include absolute-c;
+            user-select: none;
+            cursor: pointer;
+            z-index: 8;
+        }
+    }
+
+    &__drop-sdw {
+        width: 23.3rem;
+        height: 4.7rem;
+        @include absolute-c;
+        user-select: none;
+        z-index: 4;
+        border-radius: 40px;
+        box-shadow: 0 2.5rem 4.9rem 0 rgba(0, 0, 0, 0.45);
+        background: #d0d0d0;
+    }
+
+    @include for-tablet-portrait-md {
+        &__drop-sdw {
+            width: 17.3rem;
+            height: 4.7rem;
+        }
+
+        &__include {
+            height: 94%;
+        }
+    }
+}

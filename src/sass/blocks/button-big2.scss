@@ -1,0 +1,121 @@
+.button-big2 {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 42rem;
+    height: 12.4rem;
+    position: absolute;
+    z-index: 7;
+
+    &__include {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        p {
+            @include font-g(700, 2.5rem, 120%);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--color-text-light);
+            width: 100%;
+            height: 100%;
+            @include absolute-c;
+            display: grid;
+            align-items: center;
+            padding-bottom: .7rem;
+            user-select: none;
+            cursor: pointer;
+            z-index: 9;
+        }
+
+        img {
+            width: 100%;
+            max-width: 42rem;
+            height: 100%;
+            max-height: 12.4rem;
+            @include absolute-c;
+            user-select: none;
+            cursor: pointer;
+            z-index: 8;
+        }
+    }
+
+    &__drop-sdw {
+        width: 33.3rem;
+        height: 10.7rem;
+        @include absolute-c;
+        user-select: none;
+        z-index: 4;
+        border-radius: 40px;
+        box-shadow: 0 2.5rem 4.9rem 0 rgba(0, 0, 0, 0.45);
+        background: #d0d0d0;
+
+        @media (max-width: 25em) {
+            width: 80%;
+            height: 6.7rem;
+        }
+    }
+
+    @include for-laptop-desktop-xl {
+        max-width: 38rem;
+
+        &__include {
+
+            img {
+                max-width: 38rem;
+            }
+
+            p {
+                @include font-g(700, 2.4rem, 120%);
+            }
+        }
+    }
+
+    @include for-tablet-landscape-lg {
+        max-width: 31rem;
+
+        &__include {
+
+            img {
+                max-width: 31rem;
+            }
+
+            p {
+                @include font-g(700, 1.9rem, 120%);
+            }
+        }
+
+        &__drop-sdw {
+            width: 29.3rem;
+            height: 6.7rem;
+        }
+    }
+
+    @include for-tablet-portrait-md {
+        max-width: 28rem;
+
+        &__drop-sdw {
+            width: 27rem;
+            height: 5.7rem;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        max-width: 31rem;
+
+        &__drop-sdw {
+            width: 27rem;
+            height: 5.7rem;
+        }
+    }
+
+    @media (max-width: 25em) {
+        max-width: 100%;
+        padding: 0 1.9rem;
+
+        &__include p {
+            font-size: 5.5vw;
+        }
+    }
+}

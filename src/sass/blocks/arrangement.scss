@@ -1,0 +1,328 @@
+.arrangement {
+
+    padding-top: 11rem;
+    padding-bottom: 8rem;
+
+    &__title {
+        padding: 0 10.5rem;
+    }
+
+    &__title-pos {
+        margin-bottom: 13rem;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: fill;
+        }
+    }
+
+    &__bg-2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: none;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: fill;
+        }
+    }
+
+    #bg2 {
+        top: 2.9rem;
+    }
+
+    &__preview {
+        @include sizes(19.1rem, 26.6rem);
+        position: absolute;
+        top: -5.1rem;
+        right: 2rem;
+        z-index: -1;
+    }
+
+    &__block {
+        width: 100%;
+        height: 71.3rem;
+        padding: 10.5rem 5.6rem 7rem;
+        position: relative;
+
+        h5 {
+            @include font-g (700, 2.4rem, 100%);
+            color: var(--color-text);
+            padding-right: 45%;
+            margin-bottom: 8.1rem;
+        }
+
+        li {
+            @include font-g (400, 1.8rem, 120%);
+            color: var(--color-text);
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            width: .45rem;
+            height: .45rem;
+            border-radius: 50%;
+            background-color: var(--color-text);
+            top: 1rem;
+            left: 0;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__note {
+        width: 100%;
+        @include font-g (400, 1.8rem, 120%);
+        color: var(--color-text);
+        position: absolute;
+        bottom: 21.1rem;
+        left: 5.5rem;
+        z-index: 2;
+    }
+
+    &__cost {
+        width: 100%;
+        text-align: center;
+        @include font-u (700, 3.2rem, 120%);
+        color: var(--color-accent);
+        position: absolute;
+        bottom: 17.6rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+    }
+
+    &__btn {
+        bottom: 7.3rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        p {
+            font-size: 1.8rem !important;
+        }
+
+        transition: all .25s ease-out;
+
+        &:hover {
+            bottom: 6.55rem;
+            transition: all .25s ease-out;
+        }
+    }
+
+    @include for-laptop-desktop-xl {
+
+        &__bg img {
+            height: 100%;
+        }
+
+        #bg2 {
+            height: 69rem;
+            top: 2.3rem;
+        }
+
+        &__block {
+            padding: 6.5rem 4.6rem 6rem;
+        }
+
+        &__preview {
+            @include sizes(15rem, 24rem);
+            position: absolute;
+            top: -5.1rem;
+            right: 1.8rem;
+            z-index: -1;
+        }
+
+        &__title-pos {
+            margin-bottom: 10rem;
+        }
+    }
+
+    @include for-tablet-landscape-lg {
+
+        &__bg {
+            display: none;
+        }
+
+        &__bg-2 {
+            display: block;
+
+            img {
+                width: 100%;
+                height: 56rem;
+                object-fit: fill;
+            }
+        }
+
+        #bg2 {
+            height: 56rem;
+            top: 0;
+        }
+
+        &__preview {
+            @include sizes(25rem, 45rem);
+            top: -7rem;
+            right: 2.8rem;
+            max-width: 23rem;
+        }
+
+        &__title-pos {
+            margin-bottom: 9rem;
+        }
+
+        .title3 span {
+            display: inline-block;
+        }
+
+        &__block {
+
+            height: 57rem;
+            padding-right: 22rem;
+
+            h5 {
+                margin-bottom: 5.1rem;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10rem;
+            }
+        }
+
+        &__note {
+            left: 50%;
+            transform: translate(-17%, 0);
+        }
+    }
+
+    @include for-tablet-portrait-md {
+        &__block {
+            padding-right: 25rem;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        &__block {
+            height: 65rem;
+            padding-right: 1rem;
+            padding-left: 3rem;
+
+            li:nth-child(1),
+            li:nth-child(2) {
+                padding-right: 45%;
+            }
+        }
+
+        &__block:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+
+        &__preview {
+            max-width: 14rem;
+            top: 3rem;
+            right: 1.8rem;
+        }
+
+        &__title {
+            padding: 0;
+        }
+
+        &__btn {
+            bottom: 7.3rem;
+
+            &:hover {
+                bottom: 7.3rem;
+                transition: none;
+            }
+        }
+
+        &__cost {
+            bottom: 17rem;
+        }
+
+        &__note {
+            bottom: 22rem;
+        }
+
+        &__bg-2 {
+            img {
+                width: 100%;
+                height: 63rem;
+                object-fit: fill;
+            }
+        }
+    }
+
+    @include for-phone-portrait-xs {
+        padding-top: 9rem;
+        padding-bottom: 28rem;
+
+        &__block {
+
+            padding-left: 1.4rem;
+            padding-right: 1.4rem;
+
+            h5 {
+                padding-top: 21rem;
+                width: 37rem;
+                text-align: center;
+            }
+
+            li:nth-child(1),
+            li:nth-child(2) {
+                padding-right: 2rem;
+            }
+        }
+
+        &__preview {
+            max-width: 21rem;
+            top: -6rem;
+            right: 5.4rem;
+        }
+
+        &__clmns {
+            gap: 20rem;
+        }
+
+        &__bg-2 {
+            img {
+                height: 83rem;
+            }
+        }
+
+        &__btn {
+            bottom: -11.7rem;
+
+            &:hover {
+                bottom: -11.7rem;
+            }
+        }
+
+        &__cost {
+            bottom: -1rem;
+            font-size: 2.8rem;
+        }
+
+        &__note {
+            bottom: 3rem;
+        }
+    }
+}

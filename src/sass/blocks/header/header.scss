@@ -1,4 +1,235 @@
 .header {
-    border: .1rem dashed #1D4ED8;
-    background: #DBEAFE;
+    width: 100%;
+    height: 100%;
+    max-height: 10rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 0.4rem 3rem 0 rgba(36, 65, 109, 0.25);
+    @include absolute-tc;
+    z-index: 10;
+    transition: all .1s ease-in-out;
+
+    &__group {
+        @include vert-c;
+        padding-top: 2rem;
+    }
+
+    &__logo {
+        @include sizes (11rem, 5.6rem);
+    }
+
+    &__geo {
+        width: 100%;
+        max-width: 16rem;
+
+        p {
+            @include font-g (400, 2rem, 120%);
+            color: var(--color-text);
+            position: relative;
+
+            &::before {
+                content: url('../img/arrow.svg');
+                width: 2.4rem;
+                height: 2.4rem;
+                position: absolute;
+                top: 50%;
+                left: -3rem;
+                transform: translate(0, -50%);
+            }
+        }
+
+        @include for-tablet-landscape-lg {
+            display: none;
+        }
+    }
+
+    &__phone {
+        @include for-tablet-landscape-lg {
+            display: none;
+        }
+    }
+
+    &__phone-call {
+        display: flex;
+
+        p {
+            @include font-g (600, 2.5rem, 120%);
+            color: var(--color-text);
+        }
+
+        @include for-phone-landscape-sm {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__phone-form {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 0;
+
+        a {
+            @include font-g (400, 2.2rem, 120%);
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+    }
+
+    &__wrap {
+        width: 7rem;
+        height: 2.8rem;
+        padding: 1rem;
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__burger {
+        width: 5.2rem;
+        height: .4rem;
+        background-color: #424242;
+        position: relative;
+        flex-shrink: 0;
+        cursor: pointer;
+        display: block;
+
+        @media (min-width: 62em) {
+            display: none;
+        }
+    }
+
+    &__burger::before {
+        content: "";
+        position: absolute;
+        width: 5.2rem;
+        height: .4rem;
+        background-color: #424242;
+        top: -1rem;
+        left: 0;
+    }
+
+    &__burger::after {
+        content: "";
+        position: absolute;
+        width: 4.1rem;
+        height: .4rem;
+        background-color: #424242;
+        bottom: -1rem;
+        left: 0;
+    }
+
+    &__cross {
+        width: 5.2rem;
+        height: 4rem;
+        background-color: #ffffff;
+        position: relative;
+        flex-shrink: 0;
+        cursor: pointer;
+        display: none;
+    }
+
+    &__cross::before {
+        content: "";
+        position: absolute;
+        width: 4rem;
+        height: .2rem;
+        background-color: #424242;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(37deg);
+        border-radius: 1rem;
+    }
+
+    &__cross::after {
+        content: "";
+        position: absolute;
+        width: 4rem;
+        height: .2rem;
+        background-color: #424242;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-37deg);
+        border-radius: 1rem;
+    }
+
+    &__burger-menu {
+        width: 100%;
+        height: 30rem;
+        padding-top: 4rem;
+        display: none;
+
+        .header {
+            max-height: 40rem;
+        }
+
+        .header__phone {
+            display: block;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+
+            @include for-phone-landscape-sm {
+                margin-top: 2rem;
+            }
+        }
+
+        .header__geo {
+            display: block;
+            max-width: 100%;
+
+            p {
+                width: 19rem;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+
+                &::before {
+                    content: url('../img/arrow.svg');
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+
+        .header__phone-call {
+            justify-content: space-between;
+            align-items: center;
+            width: 37rem;
+            margin: 0 auto;
+
+            p {
+                @include font-g (600, 2.8rem, 120%);
+                color: var(--color-text);
+            }
+
+            @include for-phone-landscape-sm {
+                width: 100%;
+            }
+        }
+
+        .header__call-mob {
+            a {
+                @include font-g (400, 2.2rem, 120%);
+                color: var(--color-accent);
+                text-decoration: underline;
+            }
+        }
+
+        .socials {
+            margin-right: 1rem;
+
+            &__item {
+                width: 5.1rem;
+                height: 5.1rem;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+
+    @include for-tablet-portrait-md {
+        &__group {
+            padding: 2rem 0 0 2rem;
+        }
+    }
 }

@@ -1,1 +1,764 @@
-<!DOCTYPE html><html lang="en">  <head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">    <title>Heading</title>    <link rel="stylesheet" href="css/main.min.css">    <script src="js/main.js"></script>  </head>  <body>    <header class="header">      <div class="container">        <div class="row">          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>          <div class="col-4 col-xxl-4 col-lg-6 col-xs-12 lll">Водка</div>          <div class="col-8 col-xxl-8 col-lg-6 col-xs-12 lll">Блок и рог</div>        </div>      </div>    </header>    <section class="content">      <div class="container">        <h1 class="content__title">Heading</h1>        <div class="input">          <label>            <input class="content__input" type="text" placeholder="Placeholder Text"><span class="content__arrow"><picture><source srcset="img/arw2.svg" type="image/webp"><img src="img/arw2.svg" alt="Button Text"></picture></span>          </label>        </div>        <div class="content__image"><picture><source srcset="#" type="image/webp"><img src="#" alt="#"></picture></div>        <h2>Привет!!!!!</h2>        <li>Первая новость</li>        <li>Вторая новость</li>        <li>Четвертая новость</li>      </div>    </section>  </body></html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Точкасепт. Бурение скважин и колодцев на воду под ключ в Москве и области!</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__group">
+          <div class="header__logo"><img src="img/Logo.png" alt="Точкасепт"></div>
+          <div class="header__geo">
+            <p>Москва и МО</p>
+          </div>
+          <div class="yandex">
+            <div class="yandex__rating">
+              <div class="yandex__rate">5.0</div>
+              <div class="yandex__logo"><span>Я</span>ндекс</div>
+            </div>
+            <div class="yandex__stats">
+              <div class="yandex__stars"><img src="img/star.svg" alt="star2"><img src="img/star.svg" alt="star"><img src="img/star.svg" alt="star"><img src="img/star.svg" alt="star"><img src="img/star.svg" alt="star"></div>
+              <p class="yandex__users">33 отзыва&emsp;36 оценок</p>
+            </div>
+          </div>
+          <div class="header__phone">
+            <div class="header__phone-call">
+              <div class="socials"><a href="#"><img class="socials__item" src="img/tg.svg" alt="telegram"></a><a href="#"><img class="socials__item" src="img/wapp.svg" alt="whatsapp"></a></div>
+              <p>+7 (495) 123-45-67</p>
+            </div>
+            <div class="header__phone-form"><a onclick="scrolltoFn()">обратный звонок</a></div>
+          </div>
+          <div class="header__cross" id="cross"></div>
+          <div class="header__burger" id="burger"></div>
+        </div>
+      </div>
+      <div class="header__burger-menu">
+        <div class="header__phone">
+          <div class="header__phone-call">
+            <div class="socials"><a href="#"><img class="socials__item" src="img/tg.svg" alt="telegram"></a><a href="#"><img class="socials__item" src="img/wapp.svg" alt="whatsapp"></a></div>
+            <div class="header__call-mob">   
+              <p>+7 (495) 123-45-67</p><a id="call" onclick="scrolltoFn()">обратный звонок</a>
+            </div>
+          </div>
+        </div>
+        <div class="header__geo">
+          <p>Москва и МО</p>
+        </div>
+      </div>
+    </header>
+    <div class="dark"></div>
+    <section class="hero">
+      <div class="bg"><img src="img/hero_bg3.jpg" alt="background">
+        <div class="bg__leftimg"><img src="img/hero_bg-left.png" alt="left image"></div>
+      </div>
+      <div class="container">
+        <h1 class="title"><span>Бурение скважин</span><br> и колодцев<span> на воду</span><br><span>под ключ</span><span> в Москве и&nbsp;области!</span></h1>
+        <ul class="hero__benefits">
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Цена не меняется</p>
+          </li>
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Рассрочка 0%</p>
+          </li>
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Гарантия 5 лет</p>
+          </li>
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Гарантируем воду</p>
+          </li>
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Бесплатный выезд</p>
+          </li>
+          <li> <img src="img/hero_feature.svg" alt="mark">
+            <p>Лучшее качество</p>
+          </li>
+        </ul>
+        <aside class="hero__costs">
+          <div class="hero__cost">
+            <p>Цена за метр бурения<br><b>от 2.800 ₽</b></p>
+          </div>
+          <div class="hero__cost">
+            <p>Цена с обустройством скважины<br><b>от 47.000 ₽</b></p>
+          </div>
+          <div class="hero__cost">
+            <p>Цена с обустройством колодца <br><b>от 35.000 ₽</b></p>
+          </div>
+        </aside><a class="button-big hero__btn" onclick="scrolltoFn()">
+          <div class="button-big__include"><img src="img/button-big.png" alt="button">
+            <p>Рассчитать стоимость</p>
+          </div>
+          <div class="button-big__drop-sdw"></div></a>
+      </div>
+    </section>
+    <section class="choice">
+      <div class="container">
+        <h2 class="title2">Какой вид <span>водо&shy;снабжения</span> выбрать?</h2>
+        <h3 class="title3 choice__title-pos">Всё зависит от ваших потребностей</h3>
+        <div class="row func">
+          <div class="col-4 col-lg-12 side">
+            <div class="image">
+              <div class="image__img"><img src="img/choice-drawwell_img.png" alt="Копка колодца"></div>
+              <h4 class="title4 image__title">Копка<br>колодца</h4>
+            </div>
+          </div>
+          <div class="col-8 col-lg-12 conditions">
+                        <div class="row conditions__articles">
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-1.png" alt="icon-1"></div>
+                              <div class="conditions__txt">
+                                <h5>Качество воды</h5>
+                                <p>Низкое. Вода подойдет для полива, в редких случаях может использоваться в качестве питьевой</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-2.png" alt="icon-2"></div>
+                              <div class="conditions__txt">
+                                <h5>Срок службы</h5>
+                                <p>Долговечность колодца при правильном выборе места и профессиональном обустройстве в среднем составляет 8-10 лет</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-3.png" alt="icon-3"></div>
+                              <div class="conditions__txt">
+                                <h5>Глубина</h5>
+                                <p>Все зависимости от района и ваших потребностей, но средняя глубина составляет от 5 до 10 колец</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-4.png" alt="icon-4"></div>
+                              <div class="conditions__txt">
+                                <h5>Дебит</h5>
+                                <p>Зависит от глубины и типа почвы. Среднее значение составляет ??? литров</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+            <div class="row cost">
+              <div class="col-6 col-sm-12"><a class="button-mdl cost__btn" onclick="scrolltoFn()">
+                  <div class="button-mdl__include"><img src="img/button-middle.png" alt="button">
+                    <p>Рассчитать&ensp;стоимость</p>
+                  </div>
+                  <div class="button-mdl__drop-sdw"></div></a></div>
+              <p class="col-6 col-sm-12 cost__num"><span>3.000 ₽</span><br>от 2.600 ₽</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="first-sand">
+      <div class="first-sand__bg"><img src="img/bg1.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row func--option">
+          <div class="col-8 col-lg-12 conditions">
+                        <div class="row conditions__articles">
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-1.png" alt="icon-1"></div>
+                              <div class="conditions__txt">
+                                <h5>Качество воды</h5>
+                                <p>Низкое. Вода подойдет для полива, в редких случаях может использоваться в качестве питьевой</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-2.png" alt="icon-2"></div>
+                              <div class="conditions__txt">
+                                <h5>Срок службы</h5>
+                                <p>Долговечность скважины при правильном бурении и обсадке составляет от 10 до 20 лет в зависимости от интенсивности эксплуатации</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-3.png" alt="icon-3"></div>
+                              <div class="conditions__txt">
+                                <h5>Глубина</h5>
+                                <p>Все зависит от района, но средняя глубина залегания составляет около 10-40 метров</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-4.png" alt="icon-4"></div>
+                              <div class="conditions__txt">
+                                <h5>Дебит</h5>
+                                <p>Производительность от 400 до 1000 литров в час может обеспечить полив или водоснабжение небольшого дачного дома</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+            <div class="row cost">
+              <div class="col-6 col-sm-12"><a class="button-mdl cost__btn" onclick="scrolltoFn()">
+                  <div class="button-mdl__include"><img src="img/button-middle.png" alt="button">
+                    <p>Рассчитать&ensp;стоимость</p>
+                  </div>
+                  <div class="button-mdl__drop-sdw"></div></a></div>
+              <p class="col-6 col-sm-12 cost__num"><span>3.000 ₽</span><br>от 2.600 ₽</p>
+            </div>
+          </div>
+          <div class="col-4 col-lg-12 side">
+            <div class="image2">
+              <div class="image2__img"><img src="img/choice-first_img.png" alt="Скважина на первый песок"></div>
+              <h4 class="title4 image2__title-2">Скважина на&nbsp;первый песок</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="deep-sand">
+      <div class="container">
+        <div class="row func">
+          <div class="col-4 col-lg-12 side">
+            <div class="image">
+              <div class="image__img"><img src="img/choice-deep_img.png" alt="Скважина на глубокий песок"></div>
+              <h4 class="title4 image__title-2">Скважина на&nbsp;глубокий песок</h4>
+            </div>
+          </div>
+          <div class="col-8 col-lg-12 conditions">
+                        <div class="row conditions__articles">
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-1.png" alt="icon-1"></div>
+                              <div class="conditions__txt">
+                                <h5>Качество воды</h5>
+                                <p>Среднее или высокое. В большинстве случаев может использоваться в качестве питьевой</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-2.png" alt="icon-2"></div>
+                              <div class="conditions__txt">
+                                <h5>Срок службы</h5>
+                                <p>Долговечность скважины при правильном бурении и обсадке составляет от 10 до 20 лет, в зависимости от интенсивности эксплуатации</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-3.png" alt="icon-3"></div>
+                              <div class="conditions__txt">
+                                <h5>Глубина</h5>
+                                <p>В зависимости от района, но средняя глубина залегания составляет около 40-90 метров</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-4.png" alt="icon-4"></div>
+                              <div class="conditions__txt">
+                                <h5>Дебит</h5>
+                                <p>Производительность от 1 до 5 кубометров в час обеспечит водой дом, баню, гостевой дом и полив</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+            <div class="row cost">
+              <div class="col-6 col-sm-12"><a class="button-mdl cost__btn" onclick="scrolltoFn()">
+                  <div class="button-mdl__include"><img src="img/button-middle.png" alt="button">
+                    <p>Рассчитать&ensp;стоимость</p>
+                  </div>
+                  <div class="button-mdl__drop-sdw"></div></a></div>
+              <p class="col-6 col-sm-12 cost__num"><span>3.000 ₽</span><br>от 2.600 ₽</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="well">
+      <div class="well__bg"><img src="img/bg2.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row func--option">
+          <div class="col-8 col-lg-12 conditions">
+                        <div class="row conditions__articles">
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-1.png" alt="icon-1"></div>
+                              <div class="conditions__txt">
+                                <h5>Качество воды</h5>
+                                <p>Среднее. Может содержать железо и повышенную жесткость</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-2.png" alt="icon-2"></div>
+                              <div class="conditions__txt">
+                                <h5>Срок службы</h5>
+                                <p>Долговечность скважины при правильном бурении и обсадке составляет до 50 лет</p>
+                              </div>
+                            </li>
+                          </ul>
+                          <ul class="row conditions__clmn">
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-3.png" alt="icon-3"></div>
+                              <div class="conditions__txt">
+                                <h5>Глубина</h5>
+                                <p>В зависимости от района, разброс большой от 30 до 240 метров</p>
+                              </div>
+                            </li>
+                            <li class="col-6 col-sm-12 conditions__article">
+                              <div class="conditions__icon"><img src="img/choice_icon-4.png" alt="icon-4"></div>
+                              <div class="conditions__txt">
+                                <h5>Дебит</h5>
+                                <p>Производительность от 3 до8 кубометров в час. Хватит абсолютно на все</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+            <div class="row cost">
+              <div class="col-6"><a class="button-mdl cost__btn" onclick="scrolltoFn()">
+                  <div class="button-mdl__include"><img src="img/button-middle.png" alt="button">
+                    <p>Рассчитать&ensp;стоимость</p>
+                  </div>
+                  <div class="button-mdl__drop-sdw"></div></a></div>
+              <p class="col-6 cost__num"><span>3.000 ₽</span><br>от 2.600 ₽</p>
+            </div>
+          </div>
+          <div class="col-4 col-lg-12">
+            <div class="image2">
+              <div class="image2__img-2"><img src="img/choice-well_img.png" alt="Артезианская скважина на известняк"></div>
+              <h4 class="title4 image2__title">Артезианская скважина<br>на&nbsp;известняк</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="arrangement">
+      <div class="container">
+        <h2 class="title2 arrangement__title">Недостаточно просто выбрать тип скважины,</h2>
+        <h3 class="title3 arrangement__title-pos">необходимо также выбрать <span>вид обустройства</span></h3>
+        <div class="row arrangement__clmns">
+          <div class="col-4 col-lg-12 arrangement__block">
+            <div class="arrangement__bg"><img src="img/gray-blok-1.jpg" alt="preview"></div>
+            <div class="arrangement__bg-2"><img src="img/gray-blok-mob.jpg" alt="preview"></div>
+            <div class="arrangement__preview"><img src="img/arrangement_img1.png" alt="preview"></div>
+            <h5>Через оголовок</h5>
+            <ul> 
+              <li>Подойдет при сезонном проживании</li>
+              <li>Бюджетный вариант</li>
+              <li>Не подходит для подачи воды в дом</li>
+              <li>Ручное включение насоса</li>
+            </ul>
+            <p class="arrangement__note">“Под ключ”</p>
+            <p class="arrangement__cost">от 40.000 ₽</p><a class="button-small2 arrangement__btn" onclick="scrolltoFn()">
+              <div class="button-small2__include"><img src="img/button-small.png" alt="button">
+                <p>Рассчитать&ensp;стоимость</p>
+                <div class="button-small__drop-sdw"></div>
+              </div></a>
+          </div>
+          <div class="col-4 col-lg-12 arrangement__block"> 
+            <div class="arrangement__bg" id="bg2"><img src="img/gray-blok-2.jpg" alt="preview"></div>
+            <div class="arrangement__bg-2"><img src="img/gray-blok-mob.jpg" alt="preview"></div>
+            <div class="arrangement__preview"><img src="img/arrangement_img2.png" alt="preview"></div>
+            <h5>Через адаптер</h5>
+            <ul>
+              <li>Подойдет для круглогодичного проживания</li>
+              <li>Оборудование придется поставить в доме</li>
+              <li>Для скважин до 50 метров</li>
+            </ul>
+            <p class="arrangement__note">“Под ключ”</p>
+            <p class="arrangement__cost">от 55.000 ₽</p><a class="button-small2 arrangement__btn" onclick="scrolltoFn()">
+              <div class="button-small2__include"><img src="img/button-small.png" alt="button">
+                <p>Рассчитать&ensp;стоимость</p>
+                <div class="button-small__drop-sdw"></div>
+              </div></a>
+          </div>
+          <div class="col-4 col-lg-12 arrangement__block"> 
+            <div class="arrangement__bg"><img src="img/gray-blok-3.jpg" alt="preview"></div>
+            <div class="arrangement__bg-2"><img src="img/gray-blok-mob.jpg" alt="preview"></div>
+            <div class="arrangement__preview"><img src="img/arrangement_img3.png" alt="preview"></div>
+            <h5>Через кессон </h5>
+            <ul>
+              <li>Подойдет для круглогодичного проживания</li>
+              <li>Если в доме нет места под оборудование</li>
+              <li>Скважины любой глубины</li>
+            </ul>
+            <p class="arrangement__note">“Под ключ”</p>
+            <p class="arrangement__cost">от 140.000 ₽</p><a class="button-small2 arrangement__btn" onclick="scrolltoFn()">
+              <div class="button-small2__include"><img src="img/button-small.png" alt="button">
+                <p>Рассчитать&ensp;стоимость</p>
+                <div class="button-small__drop-sdw"></div>
+              </div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pipes">
+      <div class="pipes__bg"><img src="img/bg3.jpg" alt="background"></div>
+      <div class="container">
+        <h2 class="title2 pipes__title">После обвязки скважины <span>можем проложить водопровод </span>от&nbsp;скважины</h2>
+        <h3 class="pipes__title3 pipes__title-pos">и сделать <span>внутреннюю разводку по&nbsp;дому</span></h3>
+        <div class="row pipes__maxh">
+          <div class="col-5 col-md-12 pipes__water">
+            <h4 class="title4 pipes__title4-pos">Водопровод от&nbsp;скважины</h4>
+            <ul>
+              <li>Копка траншей - от 500 ₽</li>
+              <li>Подогревающий кабель - от&nbsp;1.000 ₽</li>
+              <li>Завод в дом - от 2.000 ₽</li>
+            </ul>
+          </div>
+          <div class="col-7 col-md-12 pipes__water">
+            <h4 class="title4 pipes__title4-pos">Разводка по дому</h4>
+            <ul class="pipes__padding">
+              <li>Монтаж точки канализации<br>- от 2.000 ₽</li>
+              <li>Монтаж точки водоснабжения<br>- от 1.500 ₽</li>
+              <li>Монтаж ванной или душевой кабины<br>- от 6.000 ₽</li>
+              <li>Установка унитаза или раковины<br>- от 2.500 ₽</li>
+              <li>Монтаж электрического бойлера<br>- от 6.000 ₽</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="whywe">
+      <div class="container">
+        <h2 class="title2 whywe__title">Почему <span>выбирают нас?</span></h2>
+        <h3 class="title3 whywe__title--pos">7 из 10 обртившихся к&nbsp;нам становятся нашими клиентами</h3>
+        <div class="whywe__row">
+          <div class="whywe__item whywe__item--color1">
+            <div class="icon icon__color1"><img src="img/whywe_icon-1.svg" alt="icon"></div>
+            <p>Бесплатный выезд</p>
+          </div>
+          <div class="whywe__item whywe__item--color2">
+            <div class="icon icon__color2"><img src="img/whywe_icon-2.svg" alt="icon"></div>
+            <p>Скидки и&nbsp;подарки</p>
+          </div>
+          <div class="whywe__item whywe__item--color1">
+            <div class="icon icon__color1"><img src="img/whywe_icon-5.svg" alt="icon"></div>
+            <p>Разумные цены</p>
+          </div>
+          <div class="whywe__item whywe__item--color2">
+            <div class="icon icon__color2"><img src="img/whywe_icon-6.svg" alt="icon"></div>
+            <p>Большой гарантийный срок</p>
+          </div>
+          <div class="whywe__item whywe__item--color2">
+            <div class="icon icon__color2"><img src="img/whywe_icon-3.svg" alt="icon"></div>
+            <p>Цена не меняется</p>
+          </div>
+          <div class="whywe__item whywe__item--color1">
+            <div class="icon icon__color1"><img src="img/whywe_icon-4.svg" alt="icon"></div>
+            <p>Работы под&nbsp;ключ</p>
+          </div>
+          <div class="whywe__item whywe__item--color2">
+            <div class="icon icon__color2"><img src="img/whywe_icon-7.svg" alt="icon"></div>
+            <p>Делаем всё в&nbsp;срок</p>
+          </div>
+          <div class="whywe__item whywe__item--color1">
+            <div class="icon icon__color1"><img src="img/whywe_icon-8.svg" alt="icon"></div>
+            <p>Рейтинг 5&nbsp;звёзд на&nbsp;Яндексе</p>
+          </div>
+          <div class="whywe__bg"></div>
+        </div>
+      </div>
+    </section>
+    <section class="stages">
+      <div class="stages__bg"><img src="img/bg3.jpg" alt="background"></div>
+      <div class="container">
+        <h2 class="title2 stages__title">Этапы работ</h2>
+        <h3 class="title3 stages__title3 stages__title-pos">Всё зависит <span>от&nbsp;ваших потребностей</span></h3>
+        <div class="stages__wrapper">
+          <div class="stages__stage stages__stage--1">
+            <P>Вы оставляете заявку, мы бесплтано консультируем Вас по всем интересуещим вопросам и обговариваем все условия</P><a class="button-small stages__btn" onclick="scrolltoFn()">
+              <div class="button-small__include"><img src="img/button-small.png" alt="button">
+                <p class="btn-name">Оставить заявку</p>
+                <div class="button-small__drop-sdw"></div>
+              </div></a>
+          </div>
+          <div class="stages__stage stages__stage--2">
+            <P>Бесплатный выезд инженера, который предложит идеальное решение</P>
+          </div>
+          <div class="stages__stage stages__stage--3">
+            <P>Составляем смету, фиксируем цену и заключаем договор</P>
+          </div>
+          <div class="stages__stage stages__stage--4">
+            <P>Выполняем весь спектр работ обозначенных в договоре, выдаем паспорт и гарантию на скважину</P>
+          </div>
+          <div class="stages__stage stages__stage--5">
+            <P>Вы принимаете работу, а мы - оплату по договору</P>
+          </div>
+          <div class="stages__stage stages__stage--6">
+            <P>Поздравляем! Теперь у вас есть собственное водоснабжение</P>
+          </div>
+          <div class="pipe--1"><img src="img/pipe_col-b.png" alt="decor"></div>
+          <div class="pipe--2"><img src="img/pipe_col-m.png" alt="decor"></div>
+          <div class="pipe--3"><img src="img/pipe_col-s.png" alt="decor"></div>
+          <div class="pipe--4"><img src="img/pipe_col-s2.png" alt="decor"></div>
+        </div>
+      </div>
+    </section>
+    <section class="machines">
+      <div class="container">
+        <h2 class="title2">Бездорожье и&nbsp;ограниченное пространство <span>не&nbsp;помеха!</span></h2>
+        <h3 class="title3 machines__title-pos">Используем крупногабаритную и малогабаритную технику</h3>
+        <div class="row machines__row">
+          <article class="col-6 col-sm-12">
+            <div class="machines__block">
+              <h4 class="title4 machines__title4-pos">Мало&#173;габаритные буровые машины</h4>
+              <div class="machines__block--clip"></div>
+              <ul>
+                <li>Малогабаритная буровая установка применяется в случаях ограниченного пространства, сложного рельефа или невозможности заезда крупногабаритной техники<br><br>Она также подходит для бурения неглубоких скважин
+                  <div class="machines__innerimg--1"><img src="img/technics_img1.png" alt="малогабаритная техника"></div>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="col-6 col-sm-12">
+            <div class="machines__block machines__block--colored">
+              <h4 class="title4 machines__title4-pos">Крупно&#173;габаритные буровые машины</h4>
+              <ul>
+                <li>Крупногабаритная буровая машина применяется на участке при необходимости урения глубоких скважин или при сложных геологических условиях, требующих большей мощности и устойчивости
+                  <div class="machines__innerimg--2"><img src="img/technics_img2.png" alt="крупногабаритная техника"></div>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="cases__bg"><img src="img/bg5.jpg" alt="background"></div>
+      <div class="container">
+        <h2 class="title2 cases__title">Примеры наших <span>работ</span></h2>
+        <div class="swiper pervyj">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide cases__slide">
+              <div class="row cases__row">
+                <div class="col-6 col-sm-12 cases__text">
+                  <h4 class="title4 cases__title4">Бурение артезианской скважины</h4>
+                  <ul class="cases__stats">
+                    <li>Бурение от 28.08.2023</li>
+                    <li>Тверская обл., СНТ «Чайка-2»</li>
+                    <li>Пробурили 100500 метров</li>
+                    <li>Провели водоснабжение в дом</li>
+                  </ul>
+                  <p>Сэкономили для клиента - 10.200&nbsp;₽</p><a class="button-small cases__btn" onclick="scrolltoFn()">
+                    <div class="button-small__include"><img src="img/button-small.png" alt="button">
+                      <p class="btn-name">хочу также!</p>
+                      <div class="button-small__drop-sdw"></div>
+                    </div></a>
+                  <div class="cases__arrow"> <img src="img/curve.svg" alt="button"></div>
+                </div>
+                <div class="col-6 col-sm-12">
+                  <div class="cases__photos">
+                    <div class="cases__photo"> <img src="img/cases_img1.jpg" alt="Бурение артезианской скважины"></div>
+                    <div class="cases__block">
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide cases__slide">
+              <div class="row cases__row">
+                <div class="col-6 col-sm-12 cases__text">
+                  <h4 class="title4 cases__title4">Бурение артезианской скважины</h4>
+                  <ul class="cases__stats">
+                    <li>Бурение от 28.08.2023</li>
+                    <li>Тверская обл., СНТ «Чайка-2»</li>
+                    <li>Пробурили 100500 метров</li>
+                    <li>Провели водоснабжение в дом</li>
+                  </ul>
+                  <p>Сэкономили для клиента - 10.200&nbsp;₽</p><a class="button-small cases__btn" onclick="scrolltoFn()">
+                    <div class="button-small__include"><img src="img/button-small.png" alt="button">
+                      <p class="btn-name">хочу также!</p>
+                      <div class="button-small__drop-sdw"></div>
+                    </div></a>
+                  <div class="cases__arrow"> <img src="img/curve.svg" alt="button"></div>
+                </div>
+                <div class="col-6 col-sm-12">
+                  <div class="cases__photos">
+                    <div class="cases__photo"> <img src="img/cases_img1.jpg" alt="Бурение артезианской скважины"></div>
+                    <div class="cases__block">
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide cases__slide">
+              <div class="row cases__row">
+                <div class="col-6 col-sm-12 cases__text">
+                  <h4 class="title4 cases__title4">Бурение артезианской скважины</h4>
+                  <ul class="cases__stats">
+                    <li>Бурение от 28.08.2023</li>
+                    <li>Тверская обл., СНТ «Чайка-2»</li>
+                    <li>Пробурили 100500 метров</li>
+                    <li>Провели водоснабжение в дом</li>
+                  </ul>
+                  <p>Сэкономили для клиента - 10.200&nbsp;₽</p><a class="button-small cases__btn" onclick="scrolltoFn()">
+                    <div class="button-small__include"><img src="img/button-small.png" alt="button">
+                      <p class="btn-name">хочу также!</p>
+                      <div class="button-small__drop-sdw"></div>
+                    </div></a>
+                  <div class="cases__arrow"> <img src="img/curve.svg" alt="button"></div>
+                </div>
+                <div class="col-6 col-sm-12">
+                  <div class="cases__photos">
+                    <div class="cases__photo"> <img src="img/cases_img1.jpg" alt="Бурение артезианской скважины"></div>
+                    <div class="cases__block">
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                      <div class="cases__block-img"><img src="img/cases_img1.jpg" alt="кадр из репортажа"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cases__nav-next">
+            <div class="cases__nav-next--obj"></div>
+          </div>
+          <div class="cases__nav-prev">
+            <div class="cases__nav-prev--obj"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section class="sales">
+      <div class="container">
+        <h2 class="title2"><span>Не откладывайте бурение</span> скважины на&nbsp;потом!</h2>
+        <h3 class="title3 sales__title">Успейте до повышения&nbsp;цен!</h3>
+        <div class="wrapper">
+          <div class="sales__sale">
+            <div class="sales__null"><img src="img/adventisement.jpg" alt="рассрочка 0%"></div>
+          </div>
+          <div class="sales__sale sales__right">
+            <div class="sales__wrapper"><img src="img/paybyinst_banks.webp" alt="банки"></div><a class="sales__btn button-big2" onclick="scrolltoFn()">
+              <div class="sale__btn button-big2__include"><img src="img/button-big.png" alt="button">
+                <p>Купить в рассрочку</p>
+              </div>
+              <div class="button-big2__drop-sdw"></div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback">
+      <div class="feedback__bg"><img src="img/bg6.jpg" alt="background"></div>
+      <div class="container">
+        <h2 class="title2">А вот и <span>честные отзывы</span><br>о нашей компании</h2>
+        <h3 class="title3 feedback__title">Мы рады каждому отзыву! Ознакомится с&nbsp;десятками отзывов о&nbsp;нас вы можете на&nbsp;<span>Яндекс.Картах</span></h3>
+        <div class="swiper vtoroy myswiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+            <div class="swiper-slide feedback__slide"><img src="img/feedback_img.png" alt="отзыв"></div>
+          </div>
+          <div class="feedback__nav-next">
+            <div class="cases__nav-next--obj"></div>
+          </div>
+          <div class="feedback__nav-prev">
+            <div class="cases__nav-prev--obj"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="container">
+        <h2 class="title2 questions__title">Эти вопросы задают <span>чаще&nbsp;всего</span></h2>
+        <div class="accordeon">
+          <div class="accordeon__question">
+            <p>Выезжаете ли вы на участок для оценки стоимости работ?</p>
+            <div class="accordeon__minus"></div>
+          </div>
+          <p class="accordeon__answer">Да, наш специалист бесплатно выезжает на участок для оценки геологических условий, определения глубины бурения и составления сметы.</p>
+          <div class="accordeon__question">
+            <p>Какие гарантии вы предоставляете?</p>
+            <div class="accordeon__minus"></div>
+          </div>
+          <p class="accordeon__answer">Запатентованная нами технология разведки водоносных слоев позволяет с уверенностью рассчитывать на успех.</p>
+          <div class="accordeon__question">
+            <p>Будет ли вода из скважины чистой?</p>
+            <div class="accordeon__minus"></div>
+          </div>
+          <p class="accordeon__answer">Вода из скважены будет идеально чистой после проведения предварительного выкачивания.</p>
+          <div class="accordeon__question">
+            <p>Сколько стоит бурение скважины?</p>
+            <div class="accordeon__minus"></div>
+          </div>
+          <p class="accordeon__answer">Бурение одной скважины - 100000 рублей.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer footer__bg">
+      <div class="container">
+        <h2 class="title2 footer__title">Остались вопросы? </h2>
+        <h3 class="title3 footer__subtitle"><span>cвяжитесь с нами</span> и мы ответим на них</h3>
+        <div class="row footer__blocks">
+          <div class="col-4 col-lg-6 col-sm-12 footer__contacts">
+            <div class="footer__contacts--wrap">
+              <div class="footer__contacts--icon"> <img src="img/footer_clock.png" alt="clock"></div>
+              <div class="footer__contacts--txts">
+                <h6>Режим работы: </h6>
+                <p>Пн-Пт: 9:00 - 19:00</p>
+              </div>
+            </div>
+            <div class="footer__contacts--wrap">
+              <div class="footer__contacts--icon"><img src="img/footer_phone.svg" alt="phone"></div>
+              <div class="footer__contacts--txts">
+                <h6>Телефон: </h6>
+                <p>+ 7 (495) 204-41-44</p>
+              </div>
+            </div>
+            <div class="footer__contacts--wrap">
+              <div class="footer__contacts--icon"><img src="img/footer_letter.png" alt="letter"></div>
+              <div class="footer__contacts--txts">
+                <h6>Почта: </h6>
+                <p>info@tochkasept.ru</p>
+              </div>
+            </div>
+            <div class="footer__down">
+              <div class="footer__contacts--wrap">
+                <div class="footer__contacts--icon"></div>
+                <div class="footer__contacts--txts">
+                  <h6>Соцсети:</h6>
+                </div>
+              </div>
+              <div class="footer__icons"><a href="#"><img src="img/tg.svg" alt="telegram"></a><a href="#"><img src="img/wapp.svg" alt="whatsapp"></a><a href="#"><img src="img/vk.svg" alt="vk"></a></div>
+            </div>
+          </div>
+          <div class="col-4 footer__phone"><img src="img/footer_phone-big.png" alt="звоните!"></div>
+          <div class="col-4 col-lg-6 col-sm-12 footer__form">
+            <form class="footer__form--action" action="call" id="form" method="post">
+              <h4 class="footer__title4">Закажите звонок!</h4>
+              <h5 class="footer__title5">Мы перезвоним вам за&nbsp;5&nbsp;минут</h5>
+              <p>и проконсультируем вас по всем интересующим вопросам</p>
+              <input class="footer__input" type="tel" name="phone" id="phone" placeholder="Номер телефона">
+              <label for="phone"></label>
+              <div class="footer__warning" id="warning">Введите корректный номер</div>
+              <button class="button-small-f footer__btn" type="submit">
+                <div class="button-small-f__include"><img src="img/button-small.png" alt="button">
+                  <p class="btn-name">Заказать звонок</p>
+                  <div class="button-small-f__drop-sdw"></div>
+                </div>
+              </button>
+            </form>
+          </div>
+          <div class="footer__decor"><img src="img/footer_pipe.png" alt="pipe"></div>
+        </div>
+        <div class="footer__info">
+          <p>©2024 г. ООО «Точкасепт»</p>
+          <p>Информация на сайте не является публичной офертой</p>
+        </div>
+        <div class="footer__corner"><img src="img/verh.svg" alt="decor"></div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

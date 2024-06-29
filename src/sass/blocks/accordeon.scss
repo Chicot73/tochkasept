@@ -1,0 +1,179 @@
+.accordeon {
+    padding: 0 6vw;
+
+    @include for-phone-landscape-sm {
+        padding: 0;
+    }
+
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3.7rem 4.3rem 3.8rem 6.9rem;
+        border-radius: 2rem;
+        background-color: var(--color-accent);
+        cursor: pointer;
+
+        @include for-tablet-landscape-lg {
+            padding: 3.7rem 4.3rem 3.8rem;
+        }
+
+        @include for-phone-landscape-sm {
+            padding: 3rem 4rem 3.1rem;
+        }
+
+        @include for-phone-portrait-xs {
+            padding: 2.5rem 3rem 2.7rem 3.5rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            @include font-u (400, 2rem, 140%);
+            color: var(--color-text-light);
+
+            @include for-tablet-landscape-lg {
+                @include font-u (400, 1.8rem, 140%);
+            }
+
+            @include for-phone-portrait-xs {
+                @include font-u (400, 1.6rem, 140%);
+            }
+        }
+    }
+
+    &__minus {
+        @include sizes (2.4rem, 1.7rem);
+        position: relative;
+        flex-shrink: 0;
+        margin-left: 5rem;
+
+        @include for-phone-portrait-xs {
+            @include sizes (.4rem, .3rem);
+        }
+    }
+
+    &__minus::before {
+        content: '';
+        width: .3rem;
+        height: 2.8rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .2s ease-in-out;
+    }
+
+    &__minus::after {
+        content: '';
+        width: .3rem;
+        height: 2.8rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: all .2s ease-in-out;
+    }
+
+    &__plus {
+        @include sizes (2.4rem, 1.7rem);
+        position: relative;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        @include for-phone-portrait-xs {
+            @include sizes (.4rem, .3rem);
+        }
+    }
+
+    &__plus::before {
+        content: '';
+        width: .3rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 115%;
+        transform: translate(-50%, -50%) rotate(58deg);
+        transition: all .2s ease-in-out;
+
+        @include for-phone-portrait-xs {
+            height: 2rem;
+            left: 186%;
+            transform: translate(-50%, -50%) rotate(47deg);
+        }
+    }
+
+    &__plus::after {
+        content: '';
+        width: .3rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%) rotate(-58deg);
+        transition: all .2s ease-in-out;
+
+        @include for-phone-portrait-xs {
+            height: 2rem;
+            left: -122%;
+            transform: translate(-50%, -50%) rotate(-47deg);
+        }
+    }
+
+    &__hide {
+        display: none;
+        transform: scaleY(0);
+        opacity: 0;
+        user-select: none;
+    }
+
+    &__show {
+        //display: block !important;
+        transform: scaleY(1) !important;
+        opacity: 1 !important;
+        user-select: all !important;
+        padding: 2.1rem 4.3rem 3.5rem !important;
+        font-size: 1.9rem !important;
+        line-height: 130% !important;
+        transition: all .2s ease-in-out;
+
+        @include for-tablet-landscape-lg {
+            padding: 2.1rem 4.3rem 3.5rem !important;
+        }
+
+        @include for-phone-landscape-sm {
+            padding: 2.1rem 4rem 3.5rem !important;
+        }
+
+        @include for-phone-portrait-xs {
+            padding: 2.1rem 3.5rem 3.5rem !important;
+        }
+    }
+
+    &__answer {
+        font-weight: 400;
+        font-size: 0;
+        line-height: 0;
+        font-family: "Gilroy";
+        padding: 0 4.3rem 0;
+        color: var(--color-text);
+        padding: 0 15rem 0 6.7rem;
+        opacity: 1;
+        //display: none;
+        transform: scaleY(0);
+        opacity: 0;
+        user-select: none;
+        transition: all .2s ease-in-out;
+    }
+
+}

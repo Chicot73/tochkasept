@@ -1,0 +1,37 @@
+.well {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    position: relative;
+
+    @include for-phone-landscape-sm {
+        padding-bottom: 0rem;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 76.5rem;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include for-tablet-landscape-lg {
+            height: 78.5rem;
+        }
+
+        @include for-phone-landscape-sm {
+            height: 99.5rem;
+        }
+
+        @include for-phone-portrait-xs {
+            height: 100.5rem;
+        }
+    }
+}

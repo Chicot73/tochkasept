@@ -2,7 +2,7 @@
 
 @mixin make-max-width-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
     margin: 0 auto;
-    max-width: 126rem;
+    max-width: 118rem;
     padding-left: $grid-gap-side;
     padding-right: $grid-gap-side;
 
@@ -82,7 +82,7 @@
 //Медиа-запросы
 
 @mixin for-phone-portrait-xs {
-    @media (max-width: 20em) {
+    @media (max-width: 22.5em) {
         @content;
     }
 }

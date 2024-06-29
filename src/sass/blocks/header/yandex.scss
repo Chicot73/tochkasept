@@ -1,0 +1,56 @@
+.yandex {
+    //width: 100%;
+    //min-width: 20.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__rating {
+        margin-right: 1.4rem;
+    }
+
+    &__rate {
+        font-size: 2.4rem;
+        line-height: 120%;
+        font-family: 'Inter';
+        font-weight: 400;
+        padding-bottom: .4rem;
+        text-align: center;
+        color: #000000;
+    }
+
+    &__logo {
+        font-size: 1.3rem;
+        line-height: 120%;
+        font-family: 'Inter';
+        font-weight: 400;
+        text-align: center;
+        color: #000000;
+
+        span {
+            color: #f00f00;
+        }
+    }
+
+    &__stars {
+        @include vert-c;
+        margin-bottom: 0.9rem;
+
+        img {
+            width: 2.7rem;
+        }
+    }
+
+    &__users {
+        font-size: 1rem;
+        line-height: 120%;
+        font-family: 'Inter';
+        font-weight: 400;
+        text-align: center;
+        color: #000000;
+    }
+
+    @media (max-width: 36.1em) {
+        display: none;
+    }
+}

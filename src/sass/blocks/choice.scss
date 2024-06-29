@@ -1,0 +1,54 @@
+.choice {
+    padding-top: 26rem;
+    padding-bottom: 8rem;
+
+    &__title-pos {
+        margin-bottom: 8rem;
+
+        @include for-laptop-desktop-xl {
+            margin-bottom: 6rem;
+        }
+
+        @include for-tablet-landscape-lg {
+            padding: 0 12rem 0;
+        }
+    }
+
+    @include for-laptop-desktop-xl {
+        padding-top: 37rem;
+    }
+
+    @include for-tablet-landscape-lg {
+        padding-top: 16rem;
+    }
+
+    @include for-tablet-portrait-md {
+
+        padding-top: 15rem;
+
+        &__title-pos {
+            padding: 0 9rem 3rem;
+        }
+
+        .title2 span {
+            display: inline-block;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+
+        padding-bottom: 0rem;
+
+        &__title-pos {
+            padding: 0;
+        }
+    }
+
+    @include for-phone-portrait-xs {
+        padding-top: 8rem;
+
+        &__title-pos {
+            margin-bottom: 8rem;
+        }
+    }
+}

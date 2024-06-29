@@ -1,0 +1,22 @@
+.title4 {
+    @include font-u (700, 2.9rem, 100%);
+    color: var(--color-text-light);
+}
+
+@include for-laptop-desktop-xl {
+    .title4 {
+        @include font-u (700, 2.6rem, 105%);
+    }
+}
+
+@include for-tablet-portrait-md {
+    .title4 {
+        @include font-u (700, 2.4rem, 105%);
+    }
+}
+
+@include for-phone-portrait-xs {
+    .title4 {
+        @include font-u (700, 2.2rem, 105%);
+    }
+}

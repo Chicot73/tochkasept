@@ -1,0 +1,21 @@
+.questions {
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+
+    &__title {
+        margin-bottom: 8rem !important;
+
+        @include for-phone-landscape-sm {
+            margin-bottom: 6rem !important;
+        }
+
+    }
+
+    @include for-tablet-landscape-lg {
+        padding-top: 0;
+    }
+
+    @include for-phone-portrait-xs {
+        padding-bottom: 8rem;
+    }
+}

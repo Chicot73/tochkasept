@@ -1,0 +1,309 @@
+.stages {
+    padding-top: 12rem;
+    padding-bottom: 2.8rem;
+    position: relative;
+
+    @include for-laptop-desktop-xl {
+        padding-bottom: 0;
+    }
+
+    @include for-tablet-landscape-lg {
+        padding-bottom: 27rem;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 106rem;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title3 {
+        @include font-u (600, 3.2rem, 120%);
+        text-align: center;
+        color: var(--color-text);
+
+        span {
+            color: var(--color-accent);
+        }
+    }
+
+    &__title-pos {
+        margin-bottom: 10rem;
+    }
+
+    &__stage {
+        height: 21.4rem;
+        padding: .9rem 3.3rem 2.6rem;
+        justify-content: center;
+        align-content: center;
+        background-color: linear-gradient(133deg, #818eb2 0%, #121929 100%);
+        border-radius: 1.5rem;
+
+        p {
+            @include font-g (400, 2rem, 120%);
+            color: var(--color-text-light);
+        }
+    }
+
+    &__stage--1 {
+        margin-right: 1rem;
+        grid-area: a;
+        position: relative;
+    }
+
+    &__stage--2 {
+        grid-area: b;
+    }
+
+    &__stage--3 {
+        grid-area: v;
+    }
+
+    &__stage--4 {
+        grid-area: z;
+    }
+
+    &__stage--5 {
+        grid-area: d;
+    }
+
+    &__stage--6 {
+        margin-left: 12rem;
+        grid-area: g;
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: -4rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: all .25s ease-out;
+
+        &:hover {
+            bottom: -4.75rem;
+            transition: all .25s ease-out;
+        }
+    }
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        padding-right: 9.7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr .5fr .8fr 1.7fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'a a b b v'
+            'g g d d z'
+            '. . . . .';
+        row-gap: 6rem;
+        column-gap: 6rem;
+    }
+
+    @include for-laptop-desktop-xl {
+
+        &__wrapper {
+            padding-right: 7.7rem;
+        }
+
+        &__bg {
+            height: 98rem;
+        }
+
+        &__stage p {
+            @include font-g (400, 1.8rem, 120%);
+        }
+    }
+
+    @include for-tablet-landscape-lg {
+        &__wrapper {
+            grid-template-columns: 1fr 1fr .5fr .8fr 1.7fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+                'a a a b b'
+                'z z z v v'
+                'd d d g g';
+        }
+
+        &__stage--4 {
+            margin-left: 6rem;
+            grid-area: z;
+        }
+
+        &__stage--5 {
+            margin-left: 6rem;
+            grid-area: d;
+        }
+
+        &__stage--6 {
+            margin-left: 1rem;
+            grid-area: g;
+        }
+
+        &__bg {
+            height: 132rem;
+        }
+    }
+
+    @include for-tablet-portrait-md {
+        &__wrapper {
+            padding-right: 6.7rem;
+            row-gap: 4rem;
+            column-gap: 4rem;
+        }
+
+        &__stage {
+            p {
+                @include font-g (400, 1.8rem, 120%);
+            }
+
+            padding: .9rem 2.3rem 1.6rem;
+        }
+
+        &__bg {
+            height: 129rem;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+
+        padding-bottom: 19rem;
+
+        &__bg {
+            height: 204rem;
+        }
+
+        &__wrapper {
+            padding-right: 9.7rem;
+            grid-template-columns: .2fr 1fr .2fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                'a a a'
+                '. b b'
+                '. v v'
+                '. z z'
+                '. d d'
+                '. g g';
+        }
+
+        &__stage {
+            padding: .9rem 3.3rem 1.6rem;
+        }
+
+        &__stage--1 {
+            padding-top: 0;
+            height: 17rem;
+            margin-left: 0;
+        }
+
+        &__stage--4 {
+            margin-left: 0;
+        }
+
+        &__stage--5 {
+            margin-left: 1rem;
+        }
+
+        &__stage:nth-child(2),
+        &__stage:nth-child(3),
+        &__stage:nth-child(4),
+        &__stage:nth-child(5) {
+            position: relative;
+        }
+
+        &__stage:nth-child(2)::after,
+        &__stage:nth-child(3)::after,
+        &__stage:nth-child(4)::after,
+        &__stage:nth-child(5)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -5rem;
+            transform: translate(2.9rem, -2rem);
+            width: 7.8rem;
+            height: 7.8rem;
+            background: url('../img/pipe-corner.png') no-repeat 0 0/cover;
+            z-index: 11;
+        }
+
+        &__btn {
+            transition: none;
+
+            &:hover {
+                bottom: -4rem;
+                transition: none;
+            }
+        }
+    }
+
+    @media (max-width: 30rem) {
+
+        &__wrapper {
+            width: 36.3rem;
+            padding-right: 0;
+        }
+    }
+
+    @include for-phone-portrait-xs {
+
+        padding-bottom: 19rem;
+
+        &__bg {
+            height: 192rem;
+        }
+
+        &__wrapper {
+            width: 28.3rem;
+            grid-template-rows: 1.5fr .5fr .5fr .5fr .5fr 1fr;
+            grid-template-areas:
+                'a a a'
+                'b b b'
+                'v v v'
+                'z z z'
+                'd d d'
+                '. g g';
+        }
+
+        &__stage {
+            padding: .9rem 1.4rem 1.6rem 2.3rem;
+            height: 17.4rem;
+        }
+
+        &__stage:nth-child(2)::after,
+        &__stage:nth-child(3)::after,
+        &__stage:nth-child(4)::after,
+        &__stage:nth-child(5)::after {
+            right: -4.4rem;
+            transform: translate(2.9rem, -2rem);
+            width: 7.3rem;
+            height: 7.3rem;
+        }
+
+        &__stage--1 {
+            padding-top: 0;
+            height: 26rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__stage--6 {
+            width: 21rem;
+            height: 21rem;
+            padding: 1.6rem 2.5rem 2.6rem;
+        }
+
+        &__title-pos {
+            margin-bottom: 7rem;
+        }
+    }
+}

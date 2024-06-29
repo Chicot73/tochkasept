@@ -1,0 +1,13 @@
+/* .swiper-3d .swiper-slide-shadow {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(29.312925338745117px) !important;
+    opacity: 0.5 !important;
+} */
+
+
+.swiper-slide-active {
+    //margin-right: -220px !important;
+    backdrop-filter: none !important;
+    opacity: 1 !important;
+    //transform: translate(-50%, 0) !important;
+}

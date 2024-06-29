@@ -1,0 +1,7 @@
+.active-mob {
+    display: block !important;
+
+    @media (min-width: 62.01em) {
+        display: none !important;
+    }
+}

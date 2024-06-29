@@ -1,0 +1,79 @@
+.cost {
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+
+    &__num {
+        @include font-u (700, 3.2rem, 100%);
+        color: var(--color-accent);
+
+
+        span {
+            @include font-u (400, 3.2rem, 120%);
+            text-decoration: line-through;
+            color: var(--color-text);
+        }
+    }
+
+    &__btn {
+        top: 57%;
+        left: 0;
+        transform: translate(0, -50%);
+        transition: all .25s ease-out;
+
+        &:hover {
+            top: 65%;
+            transition: all .25s ease-out;
+        }
+    }
+
+    @include for-laptop-desktop-xl {
+        margin-top: -2rem;
+    }
+
+
+
+    @include for-tablet-portrait-md {
+        margin-top: 1rem;
+
+        &__num {
+            margin-left: 2rem;
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        height: 6rem;
+        display: block !important;
+        text-align: center;
+        padding-bottom: 0rem;
+
+        &__num {
+            margin-top: 13rem !important;
+            width: 100% !important;
+        }
+
+        &__btn {
+            top: -12rem;
+            left: 50%;
+            transition: none;
+            transform: translate(-50%, 0);
+
+            &:hover {
+                top: -12rem;
+                transition: none;
+            }
+        }
+    }
+
+    @include for-phone-portrait-xs {
+        &__num {
+            margin-top: 14rem !important;
+            margin-left: 0 !important;
+            font-size: 2.8rem;
+
+            span {
+                font-size: 2.8rem;
+            }
+        }
+    }
+}

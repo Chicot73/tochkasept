@@ -1,0 +1,5 @@
+.func {
+    @include for-tablet-landscape-lg {
+        flex-direction: column;
+    }
+}

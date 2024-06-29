@@ -1,0 +1,7 @@
+.side {
+    display: block;
+}
+
+@include for-tablet-landscape-lg {
+    .side {}
+}

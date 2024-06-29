@@ -1,14 +1,645 @@
-section.content
-    .container
-        h1.content__title Heading
-        .input
-            label
-                input(type="text" placeholder="Placeholder Text" class="content__input")
-                span.content__arrow
-                    img(src="img/arw2.svg", alt="Button Text")
+section.hero
+    .bg
+        img(src="img/hero_bg3.jpg", alt="background")
+        .bg__leftimg
+            img(src="img/hero_bg-left.png", alt="left image")
 
-        .content__image
-            img(src="#", alt="#")
-        h2 Привет!!!!!
-        each item in news
-            li= item.name
+    .container
+        h1.title <span>Бурение скважин</span><br> и колодцев<span> на воду</span><br><span>под ключ</span><span> в Москве и&nbsp;области!</span>
+        
+        ul.hero__benefits
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Цена не меняется
+            
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Рассрочка 0%
+
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Гарантия 5 лет
+            
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Гарантируем воду
+
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Бесплатный выезд
+            
+            li 
+                img(src="img/hero_feature.svg", alt="mark")
+                p Лучшее качество
+
+        aside.hero__costs
+            .hero__cost
+                p Цена за метр бурения<br>
+                    b от 2.800 ₽
+
+            .hero__cost
+                p Цена с обустройством скважины<br>
+                    b от 47.000 ₽
+
+            .hero__cost
+                p Цена с обустройством колодца <br>
+                    b от 35.000 ₽
+
+        a.button-big.hero__btn(onclick="scrolltoFn()")
+            .button-big__include
+                img(src="img/button-big.png", alt="button")
+                p Рассчитать стоимость
+            .button-big__drop-sdw
+
+section.choice
+    .container
+        h2.title2 Какой вид <span>водо&shy;снабжения</span> выбрать?
+        
+        h3.title3.choice__title-pos Всё зависит от ваших потребностей
+
+        .row.func
+            .col-4.col-lg-12.side
+                .image
+                    .image__img
+                        img(src="img/choice-drawwell_img.png", alt="Копка колодца")
+                    h4.title4.image__title Копка<br>колодца
+            
+            .col-8.col-lg-12.conditions
+                mixin benefits(text1, text2, text3, text4)
+                    .row.conditions__articles
+                        ul.row.conditions__clmn
+                            li.col-6.col-sm-12.conditions__article
+                                .conditions__icon
+                                    img(src="img/choice_icon-1.png", alt="icon-1")
+                                .conditions__txt
+                                    h5 Качество воды
+                                    p= text1
+
+                            li.col-6.col-sm-12.conditions__article
+                                .conditions__icon
+                                    img(src="img/choice_icon-2.png", alt="icon-2")
+                                .conditions__txt
+                                    h5 Срок службы
+                                    p= text2
+
+                        ul.row.conditions__clmn
+                            li.col-6.col-sm-12.conditions__article
+                                .conditions__icon
+                                    img(src="img/choice_icon-3.png", alt="icon-3")
+                                .conditions__txt
+                                    h5 Глубина
+                                    p= text3
+
+                            li.col-6.col-sm-12.conditions__article
+                                .conditions__icon
+                                    img(src="img/choice_icon-4.png", alt="icon-4")
+                                .conditions__txt
+                                    h5 Дебит
+                                    p= text4
+
+                +benefits(
+                    "Низкое. Вода подойдет для полива, в редких случаях может использоваться в качестве питьевой",
+                    "Долговечность колодца при правильном выборе места и профессиональном обустройстве в среднем составляет 8-10 лет",
+                    "Все зависимости от района и ваших потребностей, но средняя глубина составляет от 5 до 10 колец",
+                    "Зависит от глубины и типа почвы. Среднее значение составляет ??? литров"
+                    )
+
+                .row.cost
+                    .col-6.col-sm-12
+                        a.button-mdl.cost__btn(onclick="scrolltoFn()")
+                            .button-mdl__include
+                                img(src="img/button-middle.png", alt="button")
+                                p Рассчитать&ensp;стоимость
+                            .button-mdl__drop-sdw
+                    
+                    p.col-6.col-sm-12.cost__num <span>3.000 ₽</span><br>от 2.600 ₽
+section.first-sand
+    .first-sand__bg
+        img(src="img/bg1.jpg", alt="background")
+
+    .container
+        .row.func--option
+            .col-8.col-lg-12.conditions
+                +benefits(
+                    "Низкое. Вода подойдет для полива, в редких случаях может использоваться в качестве питьевой",
+                    "Долговечность скважины при правильном бурении и обсадке составляет от 10 до 20 лет в зависимости от интенсивности эксплуатации",
+                    "Все зависит от района, но средняя глубина залегания составляет около 10-40 метров",
+                    "Производительность от 400 до 1000 литров в час может обеспечить полив или водоснабжение небольшого дачного дома"
+                    )
+                
+                .row.cost
+                    .col-6.col-sm-12
+                        a.button-mdl.cost__btn(onclick="scrolltoFn()")
+                            .button-mdl__include
+                                img(src="img/button-middle.png", alt="button")
+                                p Рассчитать&ensp;стоимость
+                            .button-mdl__drop-sdw
+                    
+                    p.col-6.col-sm-12.cost__num <span>3.000 ₽</span><br>от 2.600 ₽
+
+            .col-4.col-lg-12.side
+                .image2
+                    .image2__img
+                        img(src="img/choice-first_img.png", alt="Скважина на первый песок")
+                    h4.title4.image2__title-2 Скважина на&nbsp;первый песок
+
+section.deep-sand
+    .container
+        .row.func
+            .col-4.col-lg-12.side
+                .image
+                    .image__img
+                        img(src="img/choice-deep_img.png", alt="Скважина на глубокий песок")
+                    h4.title4.image__title-2 Скважина на&nbsp;глубокий песок
+            
+            .col-8.col-lg-12.conditions
+
+                +benefits(
+                    "Среднее или высокое. В большинстве случаев может использоваться в качестве питьевой",
+                    "Долговечность скважины при правильном бурении и обсадке составляет от 10 до 20 лет, в зависимости от интенсивности эксплуатации",
+                    "В зависимости от района, но средняя глубина залегания составляет около 40-90 метров",
+                    "Производительность от 1 до 5 кубометров в час обеспечит водой дом, баню, гостевой дом и полив"
+                    )
+
+                .row.cost
+                    .col-6.col-sm-12
+                        a.button-mdl.cost__btn(onclick="scrolltoFn()")
+                            .button-mdl__include
+                                img(src="img/button-middle.png", alt="button")
+                                p Рассчитать&ensp;стоимость
+                            .button-mdl__drop-sdw
+                    
+                    p.col-6.col-sm-12.cost__num <span>3.000 ₽</span><br>от 2.600 ₽
+
+section.well
+    .well__bg
+        img(src="img/bg2.jpg", alt="background")
+
+    .container
+        .row.func--option
+            .col-8.col-lg-12.conditions
+                +benefits(
+                    "Среднее. Может содержать железо и повышенную жесткость",
+                    "Долговечность скважины при правильном бурении и обсадке составляет до 50 лет",
+                    "В зависимости от района, разброс большой от 30 до 240 метров",
+                    "Производительность от 3 до8 кубометров в час. Хватит абсолютно на все"
+                    )
+                
+                .row.cost
+                    .col-6
+                        a.button-mdl.cost__btn(onclick="scrolltoFn()")
+                            .button-mdl__include
+                                img(src="img/button-middle.png", alt="button")
+                                p Рассчитать&ensp;стоимость
+                            .button-mdl__drop-sdw
+                    
+                    p.col-6.cost__num <span>3.000 ₽</span><br>от 2.600 ₽
+
+            .col-4.col-lg-12
+                .image2
+                    .image2__img-2
+                        img(src="img/choice-well_img.png", alt="Артезианская скважина на известняк")
+                    h4.title4.image2__title Артезианская скважина<br>на&nbsp;известняк
+
+section.arrangement
+    .container
+        h2.title2.arrangement__title Недостаточно просто выбрать тип скважины,
+        
+        h3.title3.arrangement__title-pos необходимо также выбрать <span>вид обустройства</span>
+
+        .row.arrangement__clmns
+            .col-4.col-lg-12.arrangement__block
+                .arrangement__bg
+                    img(src="img/gray-blok-1.jpg", alt="preview")
+
+                .arrangement__bg-2
+                    img(src="img/gray-blok-mob.jpg", alt="preview")
+
+                .arrangement__preview
+                    img(src="img/arrangement_img1.png", alt="preview")
+
+                h5 Через оголовок
+
+                ul 
+                    li Подойдет при сезонном проживании
+                    li Бюджетный вариант
+                    li Не подходит для подачи воды в дом
+                    li Ручное включение насоса
+
+                p.arrangement__note “Под ключ”
+
+                p.arrangement__cost от 40.000 ₽
+
+                a.button-small2.arrangement__btn(onclick="scrolltoFn()")
+                    .button-small2__include
+                        img(src="img/button-small.png", alt="button")
+                        p Рассчитать&ensp;стоимость
+                        .button-small__drop-sdw
+
+            .col-4.col-lg-12.arrangement__block 
+                .arrangement__bg(id="bg2")
+                    img(src="img/gray-blok-2.jpg", alt="preview")
+
+                .arrangement__bg-2
+                    img(src="img/gray-blok-mob.jpg", alt="preview")
+
+                .arrangement__preview
+                    img(src="img/arrangement_img2.png", alt="preview")
+
+                h5 Через адаптер
+
+                ul
+                    li Подойдет для круглогодичного проживания
+                    li Оборудование придется поставить в доме
+                    li Для скважин до 50 метров
+
+                p.arrangement__note “Под ключ”
+
+                p.arrangement__cost от 55.000 ₽
+
+                a.button-small2.arrangement__btn(onclick="scrolltoFn()")
+                    .button-small2__include
+                        img(src="img/button-small.png", alt="button")
+                        p Рассчитать&ensp;стоимость
+                        .button-small__drop-sdw
+
+            .col-4.col-lg-12.arrangement__block 
+                .arrangement__bg
+                    img(src="img/gray-blok-3.jpg", alt="preview")
+
+                .arrangement__bg-2
+                    img(src="img/gray-blok-mob.jpg", alt="preview")
+
+                .arrangement__preview
+                    img(src="img/arrangement_img3.png", alt="preview")
+                h5 Через кессон 
+                
+                ul
+                    li Подойдет для круглогодичного проживания
+                    li Если в доме нет места под оборудование
+                    li Скважины любой глубины
+
+                p.arrangement__note “Под ключ”
+
+                p.arrangement__cost от 140.000 ₽
+
+                a.button-small2.arrangement__btn(onclick="scrolltoFn()")
+                    .button-small2__include
+                        img(src="img/button-small.png", alt="button")
+                        p Рассчитать&ensp;стоимость
+                        .button-small__drop-sdw
+
+section.pipes
+    .pipes__bg
+        img(src="img/bg3.jpg", alt="background")
+
+    .container
+        h2.title2.pipes__title После обвязки скважины <span>можем проложить водопровод </span>от&nbsp;скважины
+        
+        h3.pipes__title3.pipes__title-pos и сделать <span>внутреннюю разводку по&nbsp;дому</span>
+
+        .row.pipes__maxh
+            .col-5.col-md-12.pipes__water
+                h4.title4.pipes__title4-pos Водопровод от&nbsp;скважины
+
+                ul
+                    li Копка траншей - от 500 ₽
+                    li Подогревающий кабель - от&nbsp;1.000 ₽
+                    li Завод в дом - от 2.000 ₽
+
+            .col-7.col-md-12.pipes__water
+                h4.title4.pipes__title4-pos Разводка по дому
+
+                ul.pipes__padding
+                    li Монтаж точки канализации<br>- от 2.000 ₽
+                    li Монтаж точки водоснабжения<br>- от 1.500 ₽
+                    li Монтаж ванной или душевой кабины<br>- от 6.000 ₽
+                    li Установка унитаза или раковины<br>- от 2.500 ₽
+                    li Монтаж электрического бойлера<br>- от 6.000 ₽
+
+section.whywe
+    .container
+        h2.title2.whywe__title Почему <span>выбирают нас?</span>
+        
+        h3.title3.whywe__title--pos 7 из 10 обртившихся к&nbsp;нам становятся нашими клиентами
+        
+        .whywe__row
+            .whywe__item.whywe__item--color1
+                .icon.icon__color1
+                    img(src="img/whywe_icon-1.svg", alt="icon")
+                p Бесплатный выезд
+            
+            .whywe__item.whywe__item--color2
+                .icon.icon__color2
+                    img(src="img/whywe_icon-2.svg", alt="icon")
+                p Скидки и&nbsp;подарки
+
+            .whywe__item.whywe__item--color1
+                .icon.icon__color1
+                    img(src="img/whywe_icon-5.svg", alt="icon")
+                p Разумные цены
+            
+            .whywe__item.whywe__item--color2
+                .icon.icon__color2
+                    img(src="img/whywe_icon-6.svg", alt="icon")
+                p Большой гарантийный срок
+
+            .whywe__item.whywe__item--color2
+                .icon.icon__color2
+                    img(src="img/whywe_icon-3.svg", alt="icon")
+                p Цена не меняется
+            
+            .whywe__item.whywe__item--color1
+                .icon.icon__color1
+                    img(src="img/whywe_icon-4.svg", alt="icon")
+                p Работы под&nbsp;ключ
+
+            .whywe__item.whywe__item--color2
+                .icon.icon__color2
+                    img(src="img/whywe_icon-7.svg", alt="icon")
+                p Делаем всё в&nbsp;срок
+            
+            .whywe__item.whywe__item--color1
+                .icon.icon__color1
+                    img(src="img/whywe_icon-8.svg", alt="icon")
+                p Рейтинг 5&nbsp;звёзд на&nbsp;Яндексе
+            .whywe__bg
+
+section.stages
+    .stages__bg
+        img(src="img/bg3.jpg", alt="background")
+
+    .container
+        h2.title2.stages__title Этапы работ
+        
+        h3.title3.stages__title3.stages__title-pos Всё зависит <span>от&nbsp;ваших потребностей</span>
+
+        .stages__wrapper
+            .stages__stage.stages__stage--1
+                P Вы оставляете заявку, мы бесплтано консультируем Вас по всем интересуещим вопросам и обговариваем все условия
+
+                a.button-small.stages__btn(onclick="scrolltoFn()")
+                    .button-small__include
+                        img(src="img/button-small.png", alt="button")
+                        p.btn-name Оставить заявку
+                        .button-small__drop-sdw
+
+            .stages__stage.stages__stage--2
+                P Бесплатный выезд инженера, который предложит идеальное решение
+
+            .stages__stage.stages__stage--3
+                P Составляем смету, фиксируем цену и заключаем договор
+
+            .stages__stage.stages__stage--4
+                P Выполняем весь спектр работ обозначенных в договоре, выдаем паспорт и гарантию на скважину
+            
+            .stages__stage.stages__stage--5
+                P Вы принимаете работу, а мы - оплату по договору
+
+            .stages__stage.stages__stage--6
+                P Поздравляем! Теперь у вас есть собственное водоснабжение
+
+            .pipe--1
+                img(src="img/pipe_col-b.png", alt="decor")
+            .pipe--2
+                img(src="img/pipe_col-m.png", alt="decor")
+            .pipe--3
+                img(src="img/pipe_col-s.png", alt="decor")
+            .pipe--4
+                img(src="img/pipe_col-s2.png", alt="decor")
+
+section.machines
+    .container
+        h2.title2 Бездорожье и&nbsp;ограниченное пространство <span>не&nbsp;помеха!</span>
+        
+        h3.title3.machines__title-pos Используем крупногабаритную и малогабаритную технику
+
+        .row.machines__row
+            article.col-6.col-sm-12
+                .machines__block
+                    h4.title4.machines__title4-pos Мало&#173;габаритные буровые машины
+                    .machines__block--clip
+                    ul
+                        li Малогабаритная буровая установка применяется в случаях ограниченного пространства, сложного рельефа или невозможности заезда крупногабаритной техники<br><br>Она также подходит для бурения неглубоких скважин
+                            .machines__innerimg--1
+                                img(src="img/technics_img1.png", alt="малогабаритная техника")
+
+            article.col-6.col-sm-12
+                .machines__block.machines__block--colored
+                    h4.title4.machines__title4-pos Крупно&#173;габаритные буровые машины
+                    ul
+                        li Крупногабаритная буровая машина применяется на участке при необходимости урения глубоких скважин или при сложных геологических условиях, требующих большей мощности и устойчивости
+                            .machines__innerimg--2
+                                img(src="img/technics_img2.png", alt="крупногабаритная техника")
+
+section.cases
+    .cases__bg
+        img(src="img/bg5.jpg", alt="background")
+
+    .container
+        h2.title2.cases__title Примеры наших <span>работ</span>
+        .swiper.pervyj
+            .swiper-wrapper
+                .swiper-slide.cases__slide
+                    .row.cases__row
+                        .col-6.col-sm-12.cases__text
+                            h4.title4.cases__title4 Бурение артезианской скважины
+
+                            ul.cases__stats
+                                li Бурение от 28.08.2023
+                                li Тверская обл., СНТ «Чайка-2»
+                                li Пробурили 100500 метров
+                                li Провели водоснабжение в дом
+
+                            p Сэкономили для клиента - 10.200&nbsp;₽
+
+                            a.button-small.cases__btn(onclick="scrolltoFn()")
+                                .button-small__include
+                                    img(src="img/button-small.png", alt="button")
+                                    p.btn-name хочу также!
+                                    .button-small__drop-sdw
+
+                            .cases__arrow 
+                                img(src="img/curve.svg", alt="button")
+
+                        .col-6.col-sm-12
+                            .cases__photos
+                                .cases__photo 
+                                    img(src="img/cases_img1.jpg", alt="Бурение артезианской скважины")
+                                .cases__block
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+
+                .swiper-slide.cases__slide
+                    .row.cases__row
+                        .col-6.col-sm-12.cases__text
+                            h4.title4.cases__title4 Бурение артезианской скважины
+
+                            ul.cases__stats
+                                li Бурение от 28.08.2023
+                                li Тверская обл., СНТ «Чайка-2»
+                                li Пробурили 100500 метров
+                                li Провели водоснабжение в дом
+
+                            p Сэкономили для клиента - 10.200&nbsp;₽
+
+                            a.button-small.cases__btn(onclick="scrolltoFn()")
+                                .button-small__include
+                                    img(src="img/button-small.png", alt="button")
+                                    p.btn-name хочу также!
+                                    .button-small__drop-sdw
+
+                            .cases__arrow 
+                                img(src="img/curve.svg", alt="button")
+
+                        .col-6.col-sm-12
+                            .cases__photos
+                                .cases__photo 
+                                    img(src="img/cases_img1.jpg", alt="Бурение артезианской скважины")
+                                .cases__block
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+
+                .swiper-slide.cases__slide
+                    .row.cases__row
+                        .col-6.col-sm-12.cases__text
+                            h4.title4.cases__title4 Бурение артезианской скважины
+
+                            ul.cases__stats
+                                li Бурение от 28.08.2023
+                                li Тверская обл., СНТ «Чайка-2»
+                                li Пробурили 100500 метров
+                                li Провели водоснабжение в дом
+
+                            p Сэкономили для клиента - 10.200&nbsp;₽
+
+                            a.button-small.cases__btn(onclick="scrolltoFn()")
+                                .button-small__include
+                                    img(src="img/button-small.png", alt="button")
+                                    p.btn-name хочу также!
+                                    .button-small__drop-sdw
+
+                            .cases__arrow 
+                                img(src="img/curve.svg", alt="button")
+
+                        .col-6.col-sm-12
+                            .cases__photos
+                                .cases__photo 
+                                    img(src="img/cases_img1.jpg", alt="Бурение артезианской скважины")
+                                .cases__block
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+                                    .cases__block-img
+                                        img(src="img/cases_img1.jpg", alt="кадр из репортажа")
+
+            .cases__nav-next
+                .cases__nav-next--obj
+                
+            .cases__nav-prev
+                .cases__nav-prev--obj
+
+            .swiper-pagination
+
+                    
+
+section.sales
+    .container
+        h2.title2 <span>Не откладывайте бурение</span> скважины на&nbsp;потом!
+        
+        h3.title3.sales__title Успейте до повышения&nbsp;цен!
+
+        .wrapper
+            .sales__sale
+                .sales__null
+                    img(src="img/adventisement.jpg", alt="рассрочка 0%")
+
+            .sales__sale.sales__right
+                .sales__wrapper
+                    img(src="img/paybyinst_banks.webp", alt="банки")
+
+                a.sales__btn.button-big2(onclick="scrolltoFn()")
+                    .sale__btn.button-big2__include
+                        img(src="img/button-big.png", alt="button")
+                        p Купить в рассрочку
+
+                    .button-big2__drop-sdw
+                
+section.feedback
+    .feedback__bg
+        img(src="img/bg6.jpg", alt="background")
+
+    .container
+        h2.title2 А вот и <span>честные отзывы</span><br>о нашей компании
+
+        h3.title3.feedback__title Мы рады каждому отзыву! Ознакомится с&nbsp;десятками отзывов о&nbsp;нас вы можете на&nbsp;<span>Яндекс.Картах</span>
+
+        .swiper.vtoroy.myswiper2
+            .swiper-wrapper
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+                .swiper-slide.feedback__slide
+                    img(src="img/feedback_img.png", alt="отзыв")
+
+            .feedback__nav-next
+                .cases__nav-next--obj
+                
+            .feedback__nav-prev
+                .cases__nav-prev--obj
+
+section.questions
+    .container
+        h2.title2.questions__title Эти вопросы задают <span>чаще&nbsp;всего</span>
+        .accordeon
+            .accordeon__question
+                p Выезжаете ли вы на участок для оценки стоимости работ?
+                .accordeon__minus
+            p.accordeon__answer Да, наш специалист бесплатно выезжает на участок для оценки геологических условий, определения глубины бурения и составления сметы.
+
+            .accordeon__question
+                p Какие гарантии вы предоставляете?
+                .accordeon__minus
+
+            p.accordeon__answer Запатентованная нами технология разведки водоносных слоев позволяет с уверенностью рассчитывать на успех.
+
+            .accordeon__question
+                p Будет ли вода из скважины чистой?
+                .accordeon__minus
+
+            p.accordeon__answer Вода из скважены будет идеально чистой после проведения предварительного выкачивания.
+
+            .accordeon__question
+                p Сколько стоит бурение скважины?
+                .accordeon__minus
+
+            p.accordeon__answer Бурение одной скважины - 100000 рублей.
+

@@ -1,33 +1,162 @@
-*,
+/**
+  Нормализация блочной модели
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-html,
-body {
-    font-size: 10px;
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
     margin: 0;
 }
 
-.block {
-    padding: 20px 5px;
-    background-color: #ddd;
-    border: 1px solid #aaa;
-    text-align: center;
-    height: 100%;
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
 }
 
-.row {
-    justify-content: center;
-    align-items: center;
+:where(dd[class]) {
+    margin-left: 0;
 }
 
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
 
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+    --paragraphMarginBottom: 24px;
+
+    margin-block: 0;
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+li {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img,
+picture {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+    --color-accent: #0A48EC;
+    --color-text: #424242;
+    --color-text-bright: #7b7b7b;
+    --color-text-light: #ffffff;
+}
+
+html,
+body {
+    font-family: 'Gilroy', Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 10px;
+    margin: 0;
+    overflow-x: hidden;
+
+    @media (max-width: 22.5em) {
+        font-size: 2.8vw;
+    }
+}
+
+body {
+    position: relative;
+}
+
+@import "fonts.scss";
+@import "mixins.scss";
 @import "blocks/*.scss";
-@import "blocks/grid/_variables"; //переменные
+@import "blocks/grid/_variables";
 @import "blocks/grid/_breakpoints";
 @import "blocks/grid/_mixins";
-@import "blocks/grid/_classes"; //Классы
+@import "blocks/grid/_classes";
 @import "blocks/header/*.scss";
-@import "blocks/header/lll/*.scss";
+@import "blocks/main/*.scss";

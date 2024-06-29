@@ -1,5 +1,5 @@
 const { watch, series, parallel } = require("gulp");  //const gulp = require("gulp");
-const browserSync = require("browser-sync").create(); //Localhost
+const browserSync = require("browser-sync").create();
 
 //Конфигурация
 const path = require("./config/path.js");

@@ -1,0 +1,16 @@
+.slider--1 {
+
+    .swiper-pagination-bullet {
+        width: .8rem;
+        height: .8rem;
+        border: .2rem solid 50%;
+        border-color: var(--color-accent);
+        background-color: #fff;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: .8rem;
+        height: .8rem;
+        background-color: var(--color-accent);
+    }
+}

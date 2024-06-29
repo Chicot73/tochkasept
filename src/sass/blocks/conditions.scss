@@ -1,0 +1,92 @@
+.conditions {
+    &__clmn {
+        margin-bottom: 2rem;
+    }
+
+    &__articles {
+        margin-top: 2.6rem;
+    }
+
+    &__article {
+        display: flex;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        @include sizes (8rem, 8rem);
+        //padding: 1.5rem;
+        background-color: var(--color-accent);
+        border-radius: 1rem;
+        margin-right: 2rem;
+    }
+
+    &__txt {
+        h5 {
+            @include font-g (700, 2.4rem, 120%);
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            letter-spacing: -0.03em;
+            @include font-g (400, 1.8rem, 130%);
+            color: var(--color-text);
+        }
+    }
+
+    &__clmn {
+        gap: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    @include for-laptop-desktop-xl {
+        &__articles {
+            margin-top: .5rem;
+            margin-bottom: 5rem;
+        }
+
+        &__clmn {
+            margin-bottom: 1.3rem;
+        }
+
+        &__article {
+            display: flex;
+        }
+
+        &__icon {
+            margin-right: 1.6rem;
+        }
+    }
+
+    @include for-tablet-portrait-md {
+        &__icon {
+            @include sizes (7rem, 7rem);
+        }
+
+        &__txt {
+            h5 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    @include for-phone-landscape-sm {
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+
+        &__clmn {
+            gap: 2rem;
+        }
+    }
+
+    @include for-phone-portrait-xs {
+        &__icon {
+            @include sizes (5rem, 5rem);
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@mixin font-u ($weight, $size, $height) {
+    font-weight: $weight; //начертание
+    font-size: $size; //размер
+    line-height: $height; //интерлиньяж
+    font-family: 'Unbounded';
+    //@include font-u (700, 9rem, 116%);
+}
+
+@mixin font-g ($weight, $size, $height) {
+    font-weight: $weight; //начертание
+    font-size: $size; //размер
+    line-height: $height; //интерлиньяж
+    font-family: 'Gilroy';
+    //@include font-g (700, 9rem, 116%);
+}
+
+@mixin sizes ($maxwith, $maxheight) {
+    width: 100%;
+    max-width: $maxwith;
+    height: 100%;
+    max-height: $maxheight;
+    //@include sizes (2.5rem, 2.5rem);
+}
+
+@mixin vert-c {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin absolute-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+
+@mixin absolute-tc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@mixin absolute-c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin gray-1 {
+    color: #424241;
+}
+
+@mixin gray-2 {
+    color: #474747;
+}
+
+@mixin gray-2-bg {
+    background: #474747;
+}
+
+//Медиа-запросы
+
+//360
+@mixin for-phone-portrait-xs {
+    @media (max-width: 22.5em) {
+        @content;
+    }
+}
+
+//576
+@mixin for-phone-landscape-sm {
+    @media (max-width: 36em) {
+        @content;
+    }
+}
+
+//768
+@mixin for-tablet-portrait-md {
+    @media (max-width: 48em) {
+        @content;
+    }
+}
+
+//992
+@mixin for-tablet-landscape-lg {
+    @media (max-width: 62em) {
+        @content;
+    }
+}
+
+//1200
+@mixin for-laptop-desktop-xl {
+    @media (max-width: 75em) {
+        @content;
+    }
+}
+
+//1400
+@mixin for-desktop-xxl {
+    @media (max-width: 87.5em) {
+        @content;
+    }
+}
+
+//1600
+@mixin for-desktop-xxxl {
+    @media (max-width: 100em) {
+        @content;
+    }
+}

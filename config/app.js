@@ -11,10 +11,7 @@ module.exports = {
     },
 
     pug: {
-        pretty: isDev, //перестает ужимать итоговый HTML
-        data: {
-            news: require("../data/news.json")
-        }
+        pretty: isDev //перестает ужимать итоговый HTML
     },
 
     webpack: {
